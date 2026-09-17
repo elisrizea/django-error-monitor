@@ -22,13 +22,13 @@ this tool is for Django projects.
 ### Step 1 — Install the package
 Detect the environment and install the matching way:
 - **Docker** (`Dockerfile` / `docker-compose.yml` with a `web`/`app` service): add
-  `django-error-monitor @ git+https://github.com/elisrizea/django-error-monitor` to `requirements.txt` (or `pyproject.toml`) and rebuild the
+  `django-error-monitor` to `requirements.txt` (or `pyproject.toml`) and rebuild the
   image, or `pip install` inside the running container.
-- **Poetry** (`poetry.lock`): `poetry add git+https://github.com/elisrizea/django-error-monitor`
-- **Pipenv** (`Pipfile`): `pipenv install git+https://github.com/elisrizea/django-error-monitor#egg=django-error-monitor`
-- **Plain venv / pip**: `pip install git+https://github.com/elisrizea/django-error-monitor`, and add the same `git+` line to `requirements.txt`.
+- **Poetry** (`poetry.lock`): `poetry add django-error-monitor`
+- **Pipenv** (`Pipfile`): `pipenv install django-error-monitor`
+- **Plain venv / pip**: `pip install django-error-monitor`, and add it to `requirements.txt`.
 
-The package is not on PyPI yet, so every method installs from GitHub.
+Pre-release / from source: `pip install git+https://github.com/elisrizea/django-error-monitor`.
 
 ### Step 2 — Add the app
 Find the settings file — a single `settings.py`, or a `settings/` package (check
@@ -73,7 +73,7 @@ Tell the user, simply:
 
 ## Manual install (human)
 
-`pip install git+https://github.com/elisrizea/django-error-monitor`, add `"ai_monitoring"` to `INSTALLED_APPS`, append
+`pip install django-error-monitor`, add `"ai_monitoring"` to `INSTALLED_APPS`, append
 `"ai_monitoring.middleware.ErrorCaptureMiddleware"` to `MIDDLEWARE`, set `ADMINS`, run
 `python manage.py migrate`, then `python manage.py monitoring_doctor`. See the
 "Quick start" in [README.md](README.md).

@@ -6,8 +6,8 @@ Drop-in middleware. No external service, no SaaS account, no per-event billing. 
 exceptions are captured into your own database, grouped so a recurring bug is one row (not
 ten thousand), and emailed to you — rate-limited so an error storm can't flood your inbox.
 
-- Package name **`django-error-monitor`** · imported as **`ai_monitoring`** · v0.1.0, 33 tests
-- Not on PyPI yet: install from GitHub (below). Extracted from the monitoring app that runs in production on DBM AI's Django products
+- Distributed as **`django-error-monitor`** on PyPI · imported as **`ai_monitoring`** · v0.1.0, 33 tests
+- Extracted from the monitoring app that runs in production on DBM AI's Django products
 - License: **0BSD** — use, modify, sell, redistribute freely; no attribution required
 
 ## What it does
@@ -22,7 +22,7 @@ ten thousand), and emailed to you — rate-limited so an error storm can't flood
 ## Quick start (developers)
 
 ```bash
-pip install git+https://github.com/elisrizea/django-error-monitor
+pip install django-error-monitor
 ```
 
 ```python
@@ -60,7 +60,7 @@ You don't have to edit anything by hand. Open your Django project in **Claude Co
 
 The assistant detects your project layout, asks a couple of plain-language questions
 (e.g. where alerts should be emailed), makes every change, runs `monitoring_doctor --test`,
-and shows you the result. Full runbook: [INSTALL.md](INSTALL.md).
+and shows you the result. Full runbook: [INSTALL.md](https://github.com/elisrizea/django-error-monitor/blob/main/INSTALL.md).
 
 ## Configuration
 
@@ -99,7 +99,7 @@ assistants. The package also registers **Django system checks**, so `manage.py c
 
 - Python ≥ 3.9
 - Django ≥ 4.2
-- `django-q` *(optional)* — background alert delivery: `pip install "django-error-monitor[async] @ git+https://github.com/elisrizea/django-error-monitor"`
+- `django-q` *(optional)* — background alert delivery: `pip install "django-error-monitor[async]"`
 
 ## Running the tests
 
@@ -110,5 +110,5 @@ python runtests.py   # 33 tests, no external services needed
 
 ## License
 
-[0BSD](LICENSE) — a gift to the community. Do whatever you like with it: use, modify,
+[0BSD](https://github.com/elisrizea/django-error-monitor/blob/main/LICENSE) — a gift to the community. Do whatever you like with it: use, modify,
 sell, redistribute. No attribution required, no warranty.

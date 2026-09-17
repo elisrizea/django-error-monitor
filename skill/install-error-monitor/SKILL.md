@@ -20,8 +20,8 @@ This mirrors the canonical runbook, `INSTALL.md`, in the django-error-monitor re
    stop and explain that this tool is for Django projects.
 2. **Install the package** — detect the environment (Docker, Poetry, Pipenv, or plain
    pip) and install `django-error-monitor` the matching way; add it to the project's
-   dependency file. The package is not on PyPI yet: install from
-   `git+https://github.com/elisrizea/django-error-monitor`.
+   dependency file. Install from PyPI; fall back to
+   `git+https://github.com/elisrizea/django-error-monitor` if needed.
 3. **Add the app** — add `"ai_monitoring"` to `INSTALLED_APPS` in the correct settings
    file (ask if there are several).
 4. **Add the middleware** — append `"ai_monitoring.middleware.ErrorCaptureMiddleware"`
