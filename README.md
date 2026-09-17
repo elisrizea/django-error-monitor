@@ -6,7 +6,8 @@ Drop-in middleware. No external service, no SaaS account, no per-event billing. 
 exceptions are captured into your own database, grouped so a recurring bug is one row (not
 ten thousand), and emailed to you — rate-limited so an error storm can't flood your inbox.
 
-- Distributed as **`django-error-monitor`** on PyPI · imported as **`ai_monitoring`**
+- Package name **`django-error-monitor`** · imported as **`ai_monitoring`** · v0.1.0, 33 tests
+- Not on PyPI yet: install from GitHub (below). Extracted from the monitoring app that runs in production on DBM AI's Django products
 - License: **0BSD** — use, modify, sell, redistribute freely; no attribution required
 
 ## What it does
@@ -21,7 +22,7 @@ ten thousand), and emailed to you — rate-limited so an error storm can't flood
 ## Quick start (developers)
 
 ```bash
-pip install django-error-monitor
+pip install git+https://github.com/elisrizea/django-error-monitor
 ```
 
 ```python
@@ -98,12 +99,13 @@ assistants. The package also registers **Django system checks**, so `manage.py c
 
 - Python ≥ 3.9
 - Django ≥ 4.2
-- `django-q` *(optional)* — background alert delivery: `pip install django-error-monitor[async]`
+- `django-q` *(optional)* — background alert delivery: `pip install "django-error-monitor[async] @ git+https://github.com/elisrizea/django-error-monitor"`
 
 ## Running the tests
 
 ```bash
-python runtests.py
+pip install Django
+python runtests.py   # 33 tests, no external services needed
 ```
 
 ## License
